@@ -5,10 +5,13 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
+const name = prompt("Please tell me your name")
+alert("Hello " + name + "!" );
 
 // Step 2 - Food choice
 // Your code goes here
-prompt("Please tell me your name")
+let selectedFood = prompt("What would you like to order?" + [" Pizza", "pasta", "salad?"]);
+
 
 // Step 3 - Subtype choice
 // Your code goes here
