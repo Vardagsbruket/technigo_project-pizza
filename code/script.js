@@ -8,6 +8,7 @@ alert(
 
 // Step 2 - Food choice
 // Your code goes here
+prompt("Please tell me your name")
 
 // Step 3 - Subtype choice
 // Your code goes here
