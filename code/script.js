@@ -37,7 +37,8 @@ alert(`You have chosen ${selectedFood}.`);
 let choseTopping="";
 let topping=[];
 
-switch (selectTopping) {
+
+switch (selectedFood) {
   case "Pizza":
     choseTopping = prompt(
       `Select a topping for your pizza.
@@ -76,15 +77,15 @@ switch (selectTopping) {
       exit(1);
 }
 
-if (selectTopping === "1") {
+if (topping === "1") {
   alert(
     `Great choice! You have selected ${selectedFood} with ${topping[0]}.`
   );
-} else if (selectTopping === "2") {
+} else if (topping === "2") {
   alert(
     `Great choice! You have selected ${selectedFood} with ${topping[1]}.`
   );
-} else if (selectTopping === "3") {
+} else if (topping === "3") {
   alert(
     `Great choice! You have selected ${selectedFood} with ${topping[2]}.`
   );
@@ -100,9 +101,9 @@ const userAge = prompt(`Is this meal for a child or an adult?
 let mealPrice = "";
 
 if (userAge === "1") {
-  mealPrice === "adult 150 SEK";
+  mealPrice = "adult 150 SEK";
 } else if (userAge === "2") {
-  mealPrice === "child 90 SEK";
+  mealPrice = "child 90 SEK";
 } else {
   alert("Invalid age, please start again and add a number as your age.");
   exit(1);
@@ -117,9 +118,9 @@ const confirmation = prompt(`You have selected ${selectedFood} with ${topping} m
 Would you like to confirm your order?
 Type Yes or No.`);
 
-if (confirmation === "Yes" && "yes") {
+if (confirmation === "Yes" || confirmation === "yes") {
   alert(`Thank you for your order! Your meal is being prepared.`);
-} else if (confirmation === "No" && "no") {
+} else if (confirmation === "No" || confirmation === "no") {
   alert(`Your order has been cancelled. We hope you come back to order from us soon!`);
 } else {
   alert(`Invalid choice, please start again.`);
