@@ -37,9 +37,9 @@ alert(`You have chosen ${selectedFood}.`);
 let choseTopping="";
 let topping=[];
 
-switch(selectedFood) {
-  case "1":
-  choseTopping= prompt(
+switch (selectTopping) {
+  case "Pizza":
+    choseTopping = prompt(
       `Select a topping for your pizza.
       1 - Cheese
       2 - Olives
@@ -49,8 +49,8 @@ switch(selectedFood) {
     topping= ["Cheese", "Olives", "Prawns"];
     break;
 
-    case "2":
-    choseTopping = prompt(
+    case "Pasta":
+      choseTopping = prompt(
       `Select a topping for your pasta.
       1 - Pesto
       2 - Arribiata
@@ -60,22 +60,35 @@ switch(selectedFood) {
     topping= ["Pesto", "Arribiata", "Carbonara"];
     break;
 
-    case "3":
-    choseTopping= prompt(
+    case "Salad":
+      choseTopping = prompt(
       `Select a topping for your salad.
       1 - Greek
       2 - Ceasar
       3 - Potatoe
       Please enter the number of your choice.`
-    );
+      );
     topping= ["Greek", "Ceasar", "Potatoe"];
     break;
 
     default:
       alert(`Invalid choice, please start again.`);
-    exit();
+      exit(1);
 }
 
+if (selectTopping === "1") {
+  alert(
+    `Great choice! You have selected ${selectedFood} with ${topping[0]}.`
+  );
+} else if (selectTopping === "2") {
+  alert(
+    `Great choice! You have selected ${selectedFood} with ${topping[1]}.`
+  );
+} else if (selectTopping === "3") {
+  alert(
+    `Great choice! You have selected ${selectedFood} with ${topping[2]}.`
+  );
+}
 
 // Step 4 - Age
 
