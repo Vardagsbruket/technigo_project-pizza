@@ -91,7 +91,37 @@ if (selectTopping === "1") {
 }
 
 // Step 4 - Age
+const userAge = prompt(`Is this meal for a child or an adult?
+  1 - Adult
+  2 - Child
+  Please enter the number corresponding to your meal size.`
+);
 
+let mealPrice = "";
+
+if (userAge === "1") {
+  mealPrice === "adult 150 SEK";
+} else if (userAge === "2") {
+  mealPrice === "child 90 SEK";
+} else {
+  alert("Invalid age, please start again and add a number as your age.");
+  exit(1);
+}
+
+alert(`You have selected meal size ${mealPrice}.`);
 
 // Step 5 - Order confirmation
 
+
+const confirmation = prompt(`You have selected ${selectedFood} with ${topping} meal size ${mealPrice}. 
+Would you like to confirm your order?
+Type Yes or No.`);
+
+if (confirmation === "Yes" && "yes") {
+  alert(`Thank you for your order! Your meal is being prepared.`);
+} else if (confirmation === "No" && "no") {
+  alert(`Your order has been cancelled. We hope you come back to order from us soon!`);
+} else {
+  alert(`Invalid choice, please start again.`);
+  exit(1);
+}
